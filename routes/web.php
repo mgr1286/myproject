@@ -18,3 +18,11 @@ Route::get('/', function () {
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
+
+//setting Routes
+Route::group(['middleware'=> 'web'],function(){
+  Route::resource('setting','\App\Http\Controllers\SettingController');
+  Route::post('setting/{id}/update','\App\Http\Controllers\SettingController@update');
+  Route::get('setting/{id}/delete','\App\Http\Controllers\SettingController@destroy');
+  Route::get('setting/{id}/deleteMsg','\App\Http\Controllers\SettingController@DeleteMsg');
+});
