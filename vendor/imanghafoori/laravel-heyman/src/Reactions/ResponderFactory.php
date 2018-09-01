@@ -48,9 +48,10 @@ class ResponderFactory
     protected function exception(array $e): \Closure
     {
         return function () use ($e) {
-            $exClass = $e['class'];
+            $exClass = $e[0];
+            $message = $e[1];
 
-            throw new $exClass($e['message']);
+            throw new $exClass($message);
         };
     }
 

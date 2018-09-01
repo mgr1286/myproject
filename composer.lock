@@ -831,16 +831,16 @@
         },
         {
             "name": "imanghafoori/laravel-heyman",
-            "version": "2.2.10",
+            "version": "2.2.11",
             "source": {
                 "type": "git",
                 "url": "https://github.com/imanghafoori1/laravel-heyman.git",
-                "reference": "dfdf36f8f37a84cfa0b901c42df22c35b0462168"
+                "reference": "29d79e75eca637a6dc59dfaabbb7fba7032624ac"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/imanghafoori1/laravel-heyman/zipball/dfdf36f8f37a84cfa0b901c42df22c35b0462168",
-                "reference": "dfdf36f8f37a84cfa0b901c42df22c35b0462168",
+                "url": "https://api.github.com/repos/imanghafoori1/laravel-heyman/zipball/29d79e75eca637a6dc59dfaabbb7fba7032624ac",
+                "reference": "29d79e75eca637a6dc59dfaabbb7fba7032624ac",
                 "shasum": ""
             },
             "require": {
@@ -888,7 +888,7 @@
                 "laravel5-package",
                 "php"
             ],
-            "time": "2018-08-20T16:55:45+00:00"
+            "time": "2018-08-30T16:40:15+00:00"
         },
         {
             "name": "imanghafoori/laravel-terminator",
@@ -1551,16 +1551,16 @@
         },
         {
             "name": "maatwebsite/excel",
-            "version": "2.1.28",
+            "version": "2.1.29",
             "source": {
                 "type": "git",
                 "url": "https://github.com/Maatwebsite/Laravel-Excel.git",
-                "reference": "06e397a30595d1082963d6aa5ec0c3a9961d70c8"
+                "reference": "e1e1e1a9f69ba98ce6946e4f150e5531a5250d08"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/Maatwebsite/Laravel-Excel/zipball/06e397a30595d1082963d6aa5ec0c3a9961d70c8",
-                "reference": "06e397a30595d1082963d6aa5ec0c3a9961d70c8",
+                "url": "https://api.github.com/repos/Maatwebsite/Laravel-Excel/zipball/e1e1e1a9f69ba98ce6946e4f150e5531a5250d08",
+                "reference": "e1e1e1a9f69ba98ce6946e4f150e5531a5250d08",
                 "shasum": ""
             },
             "require": {
@@ -1625,7 +1625,7 @@
                 "import",
                 "laravel"
             ],
-            "time": "2018-05-09T14:34:18+00:00"
+            "time": "2018-08-29T06:46:16+00:00"
         },
         {
             "name": "monolog/monolog",

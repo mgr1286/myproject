@@ -34,9 +34,9 @@ class Redirector
      */
     public function to(string $path, int $status = 302, array $headers = [], $secure = null): RedirectionMsg
     {
-        $this->chain->addRedirect(__FUNCTION__, func_get_args());
+        $this->chain->commitArray([__FUNCTION__, func_get_args()], 'redirect');
 
-        return new RedirectionMsg($this->chain, $this);
+        return $this->redirectMsgObj();
     }
 
     /**
@@ -47,13 +47,13 @@ class Redirector
      * @param int    $status
      * @param array  $headers
      *
-     * @return \Imanghafoori\HeyMan\RedirectionMsg
+     * @return RedirectionMsg
      */
     public function route(string $route, array $parameters = [], int $status = 302, array $headers = []): RedirectionMsg
     {
-        $this->chain->addRedirect(__FUNCTION__, func_get_args());
+        $this->chain->commitArray([__FUNCTION__, func_get_args()], 'redirect');
 
-        return new RedirectionMsg($this->chain, $this);
+        return $this->redirectMsgObj();
     }
 
     /**
@@ -64,13 +64,13 @@ class Redirector
      * @param int    $status
      * @param array  $headers
      *
-     * @return \Imanghafoori\HeyMan\RedirectionMsg
+     * @return RedirectionMsg
      */
     public function action($action, array $parameters = [], int $status = 302, array $headers = []): RedirectionMsg
     {
-        $this->chain->addRedirect(__FUNCTION__, func_get_args());
+        $this->chain->commitArray([__FUNCTION__, func_get_args()], 'redirect');
 
-        return new RedirectionMsg($this->chain, $this);
+        return $this->redirectMsgObj();
     }
 
     /**
@@ -81,13 +81,13 @@ class Redirector
      * @param array     $headers
      * @param bool|null $secure
      *
-     * @return \Imanghafoori\HeyMan\RedirectionMsg
+     * @return RedirectionMsg
      */
     public function guest($path, int $status = 302, array $headers = [], $secure = null): RedirectionMsg
     {
-        $this->chain->addRedirect(__FUNCTION__, func_get_args());
+        $this->chain->commitArray([__FUNCTION__, func_get_args()], 'redirect');
 
-        return new RedirectionMsg($this->chain, $this);
+        return $this->redirectMsgObj();
     }
 
     /**
@@ -98,12 +98,20 @@ class Redirector
      * @param array     $headers
      * @param bool|null $secure
      *
-     * @return \Imanghafoori\HeyMan\RedirectionMsg
+     * @return RedirectionMsg
      */
     public function intended(string $default = '/', int $status = 302, array $headers = [], $secure = null): RedirectionMsg
     {
-        $this->chain->addRedirect(__FUNCTION__, func_get_args());
+        $this->chain->commitArray([__FUNCTION__, func_get_args()], 'redirect');
 
+        return $this->redirectMsgObj();
+    }
+
+    /**
+     * @return RedirectionMsg
+     */
+    private function redirectMsgObj(): RedirectionMsg
+    {
         return new RedirectionMsg($this->chain, $this);
     }
 }
